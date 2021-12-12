@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang=pt-br>
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    rel="stylesheet">
+    <script type="module" src="ceps.js"></script>   
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <title>DESAFIO ME ACHA</title>
+</head>
+
+
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        border: 0;
+        box-sizing: border-box;
+        height: 100%;
+    }
+
+    header {
+        width: 100%;
+        height: 200px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        color: #fff;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        position: absolute;
+        z-index: 1;
+        background-image: linear-gradient(45deg, #0D47A1, #2196F3)
+    }   
+
+    h1 {
+        padding-top: 60px;
+        font-size: 1.5em;
+    }
+
+    h2 {
+        font-size: 0.8em;
+        padding-bottom: 70px;
+
+    }
+
+    #icone {
+        display: flex;
+        font-size: 60px;
+        color: #2196F3;
+        width: 80%;
+        height: 80px;
+        align-items: center;
+        border-color: black;
+        border: 2px;
+    }
+
+    input, textarea, button 
+    {
+        border: 2px solid #000;
+        width: 250px;
+        height: 25px;       
+    }
+
+    #divIcone {
+        position: absolute;
+        justify-content: center;
+        flex-direction: column;
+        justify-content: center;
+        width: 80px;
+        height: 80px;
+        background-color: #fff;        
+        z-index: 2;        
+        border-radius: 80px;
+        padding-left: 7px;        
+        margin-left: 47%;
+        margin-top: 160px;
+    }
+
+    #caixa_mestre {
+        width: 400px;
+        height: auto;
+        border: solid 2px black;
+        margin-top: 300px;
+        display: flex;
+        flex-direction: column;        
+        align-items: center;  
+        position:absolute; 
+        padding-top: 10px;
+        padding-bottom: 30px;          
+
+    }
+    #tudo{
+       
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;        
+    }
+   
+    .entradas{
+        display: flex;
+        flex-direction: column;
+        justify-content: left;  
+        font-size: 1.1em;     
+        font-weight:bold ;
+
+    }
+
+    #buscar{
+        margin-top: 20px;
+    }
+
+    #logo{
+        position: absolute;
+        left: 48%;        
+    }
+
+    </style>
+
+<body>
+    <header>
+        <h1>ME ACHA!</h1>
+        <h2>ENCONTRE UM ENDEREÇO PELO NÚMERO DE CEP</h2>
+        <div id="logo">
+        <div id="divIcone">
+            <span id="icone" class="material-icons">travel_explore</span>
+        </div>
+    </div>
+    </header>
+
+    <main>
+    <div id="tudo">        
+
+        <div id="caixa_mestre" >
+
+             <form action="">  
+                <fieldset>
+                    <div class="entradas">
+                    <label>Cep</label>
+                    <input class="cxCep" type="text" name="cep" required>
+                    
+                </div>
+
+                <div class="entradas">
+                    <label>Rua</label>
+                    <input type="text" id="logradouro" name="rua"  readonly >
+
+                </div>
+
+                <div class="entradas">
+                    <label>Bairro</label>
+                    <input type="text" id="bairro" name="bairro" readonly>
+                    </div>
+
+                    <div class="entradas">
+                    <label>Cidade</label>
+                    <input type="text" id="localidade" name="cidade" readonly>
+                    </div>
+
+                    <div class="entradas">                        
+                    <label>Estado</label>
+
+                    <input type="button" id="btnBuscaCep" value="BUSCAR CEP" name="buscar">
+                </div>
+                    
+                </fieldset>
+            </form>
+        </div>
+        
+    </div>
+    </main>
+    <footer></footer>
+</body>
+</html>
